@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Word Details</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #9FE2BF;
+      color: #333; /* Dark text color */
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .container {
+      background-color: rgba(255, 255, 255, 0.8); /* White background with opacity */
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      width: 100%;
+    }
+    h2 {
+      text-align: center;
+      color: #00796b; /* Dark teal color for heading */
+    }
+    p {
+      font-size: 18px;
+      color: #004d40; /* Darker teal color for text */
+    }
+    .label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h2>Word Details</h2>
+
+  <p><span class="label">Word:</span> <span th:text="${word.word}"></span></p>
+  <p><span class="label">Hints:</span> <span th:text="${word.hints}"></span></p>
+  <p><span class="label">Level:</span> <span th:text="${word.level}"></span></p>
+</div>
+</body>
+</html>
